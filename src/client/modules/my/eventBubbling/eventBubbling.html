@@ -1,0 +1,37 @@
+<template>
+    <ui-card title="Event Bubbling">
+        <template if:true={contacts}>
+            <div class="contacts">
+                <!-- recipe-contact-list-item emits a non-bubbling event so each element must have a listener-->
+                <div class="contact-list" onselect={handleSelect}>
+                    <template for:each={contacts} for:item="contact">
+                        <my-contact-tile key={contact.Id} contact={contact}>
+                        </my-contact-tile>
+                    </template>
+                </div>
+                <div class="contact-details">
+                    <template if:true={selectedContact}>
+                        <img
+                            src={selectedContact.Picture}
+                            alt="Profile photo"
+                        />
+                        <p>{selectedContact.Name}</p>
+                        <p>{selectedContact.Title}</p>
+                        <p>
+                            <ui-output
+                                type="phone"
+                                value={selectedContact.Phone}
+                            ></ui-output>
+                        </p>
+                        <p>
+                            <ui-output
+                                type="email"
+                                value={selectedContact.Email}
+                            ></ui-output>
+                        </p>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </ui-card>
+</template>

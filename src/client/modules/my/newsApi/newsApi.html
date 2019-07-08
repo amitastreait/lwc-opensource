@@ -1,0 +1,46 @@
+<template>
+    <ui-card title="REST API CALL">
+        <div>
+            <label for="fname">Enter Query Below</label>
+            <input
+                type="text"
+                name="fname"
+                value={query}
+                class="input"
+                onchange={handleSearchKeyChange}
+                onkeydown={handleSearchKeyChange}
+                onkeyup={handleSearchKeyChange}
+            />
+        </div>
+        <div>
+            <button class="button" onclick={fetchAPI}>Fetch News</button>
+        </div>
+        <div>
+            <template if:true={news}>
+                <template for:each={news} for:item="item">
+                    <div key={item.title}>
+                        <article>
+                            <h1>{item.title}</h1>
+                            <p>
+                                <strong>Author:</strong> {item.author},
+                                <strong>Published:</strong> {item.publishedAt}
+                            </p>
+                            <div>
+                                <img
+                                    src={item.urlToImage}
+                                    class="image-wrapper"
+                                />
+                            </div>
+                            <p style="text-align: justify;line-height: 25px;">
+                                {item.content} &nbsp; &nbsp;
+                                <a href={item.url} target="_blank"
+                                    >Read More...</a
+                                >
+                            </p>
+                        </article>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </ui-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <ui-card title="HelloForEach">
+        <template if:true={records} >
+            <template for:each={records} for:item="con">
+                <p key={con.Id}>
+                    {con.Name} &nbsp; {con.Title} <br/>
+                </p>
+            </template>
+        </template>
+    </ui-card>
+</template>

@@ -1,0 +1,100 @@
+<template>
+    <div class="wrapper">
+        <header class="main-head">
+            <div class="navigation-bar">
+                <div class="navigation-container">
+                    <img src="/resources/lwc.png" style="height: 78px;" />
+                    <img
+                        src="https://www.sfdcpanther.com/wp-content/uploads/2019/02/sfcd-psd-logo-1.png"
+                    />
+                    <ul>
+                        <li>
+                            <a
+                                href="https://lwc.dev/guide/introduction"
+                                target="_blank"
+                            >
+                                Guide
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://developer.salesforce.com/blogs/"
+                                target="_blank"
+                            >
+                                Salesforce.com Blog</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://trailhead.salesforce.com"
+                                target="_blank"
+                            >
+                                Trailhead</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/trailheadapps/lwc-recipes-oss"
+                                target="_blank"
+                            >
+                                Local Development</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <nav class="main-nav">
+            <div class="vertical-menu">
+                <a
+                    href="JavaScript:void(0);"
+                    data-item="isHello"
+                    onclick={navItemsSelected}
+                    >Hello</a
+                >
+                <!-- <a href="JavaScript:void(0);" onclick={navItemsSelected} 
+                data-item="isdynamic" >Dynamic Binding</a> -->
+                <a
+                    href="JavaScript:void(0);"
+                    data-item="isParent"
+                    onclick={navItemsSelected}
+                    >Parent-Child</a
+                >
+                <a
+                    href="JavaScript:void(0);"
+                    data-item="isChild"
+                    onclick={navItemsSelected}
+                    >Child-Parent</a
+                >
+                <a
+                    href="JavaScript:void(0);"
+                    data-item="isMisc"
+                    onclick={navItemsSelected}
+                    >Misc</a
+                >
+            </div>
+        </nav>
+        <article class="content">
+            <template if:true={navMenu.isHello}>
+                <my-hello></my-hello>
+                <my-hello-world></my-hello-world>
+                <my-hello-for-each></my-hello-for-each>
+            </template>
+            <template if:true={navMenu.isdynamic}> </template>
+            <template if:true={navMenu.isChild}>
+                <my-contactlist></my-contactlist>
+                <my-event-bubbling></my-event-bubbling>
+            </template>
+            <template if:true={navMenu.isParent}>
+                <my-api-prop></my-api-prop>
+                <my-api-function></my-api-function>
+            </template>
+            <template if:true={navMenu.isMisc}>
+                <my-news-api></my-news-api>
+            </template>
+        </article>
+        <aside class="side"></aside>
+        <div class="ad"></div>
+        <footer class="main-footer"></footer>
+    </div>
+</template>

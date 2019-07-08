@@ -1,0 +1,17 @@
+<template>
+    <ui-card title="API Property">
+        <div>
+            <label for="fname">Enter Value</label>
+            <input
+                type="text"
+                name="fname"
+                value={percentage}
+                class="input"
+                onchange={handleOnChange}
+                onkeydown={handleOnChange}
+                onkeyup={handleOnChange}
+            />
+        </div>
+        <my-chart-bar progress={percentage}></my-chart-bar>
+    </ui-card>
+</template>

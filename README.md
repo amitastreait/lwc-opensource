@@ -1,4 +1,4 @@
-# my-app
+# Lightning Web Component Local Development
 
 Here will be some information about the app.
 

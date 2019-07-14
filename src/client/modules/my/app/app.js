@@ -11,7 +11,8 @@ export default class App extends LightningElement {
         isdynamic: false,
         isParent: false,
         isChild: false,
-        isMisc: false
+        isMisc: false,
+        isShadow : false
     };
     renderedCallback() {
         if (this._isRendered) return;

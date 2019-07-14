@@ -52,6 +52,12 @@
                     onclick={navItemsSelected}
                     >Hello</a
                 >
+                <a
+                    href="JavaScript:void(0);"
+                    data-item="isShadow"
+                    onclick={navItemsSelected}
+                    >Shadow DOM</a
+                >
                 <!-- <a href="JavaScript:void(0);" onclick={navItemsSelected} 
                 data-item="isdynamic" >Dynamic Binding</a> -->
                 <a
@@ -75,6 +81,9 @@
             </div>
         </nav>
         <article class="content">
+            <template if:true={navMenu.isShadow}>
+                <my-parent></my-parent>
+            </template>
             <template if:true={navMenu.isHello}>
                 <my-hello></my-hello>
                 <my-hello-world></my-hello-world>

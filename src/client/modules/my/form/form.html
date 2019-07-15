@@ -1,0 +1,57 @@
+<template>
+    <ui-card title="Fill Employee Info">
+        <label for="fname">First Name</label>
+        <input
+            type="text"
+            name="firstName"
+            value={student.firstName}
+            class="input"
+            onchange={handleOnChange}
+            onkeydown={handleOnChange}
+            onkeyup={handleOnChange}
+        />
+        <label for="fname">Last Name</label>
+        <input
+            type="text"
+            name="lastName"
+            value={student.lastName}
+            class="input"
+            onchange={handleOnChange}
+            onkeydown={handleOnChange}
+            onkeyup={handleOnChange}
+        />
+        <label for="fname">Title</label>
+        <input
+            type="text"
+            name="title"
+            value={student.title}
+            class="input"
+            onchange={handleOnChange}
+            onkeydown={handleOnChange}
+            onkeyup={handleOnChange}
+        />
+        <label for="fname">Email</label>
+        <input
+            type="text"
+            name="email"
+            value={student.email}
+            class="input"
+            onchange={handleOnChange}
+            onkeydown={handleOnChange}
+            onkeyup={handleOnChange}
+        />
+        <div>
+            <button class="button" onclick={submitForm}>Submit Form</button>
+        </div>
+    </ui-card>
+    <template if:true={students}>
+        <ui-card title="Employee Info">
+            <template for:each={students} for:item="emp">
+                <p key={emp.Id}>
+                    {emp.firstName} &nbsp; {emp.lastName} 
+                    {emp.title} &nbsp; {emp.email}
+                </p>
+            </template>
+        </ui-card>
+    </template>
+</template>

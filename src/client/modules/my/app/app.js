@@ -12,7 +12,8 @@ export default class App extends LightningElement {
         isParent: false,
         isChild: false,
         isMisc: false,
-        isShadow : false
+        isShadow: false,
+        isForm : false
     };
     renderedCallback() {
         if (this._isRendered) return;

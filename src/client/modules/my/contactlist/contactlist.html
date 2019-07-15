@@ -1,8 +1,7 @@
 <template>
-    <ui-card title="EventWithData">
+    <ui-card title="Simple Event With Data">
         <template if:true={contacts}>
             <div class="contacts">
-                <!-- recipe-contact-list-item emits a non-bubbling event so each element must have a listener-->
                 <div class="contact-list">
                     <template for:each={contacts} for:item="contact">
                         <my-contact-item

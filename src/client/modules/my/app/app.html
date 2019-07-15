@@ -40,6 +40,14 @@
                                 Local Development</a
                             >
                         </li>
+                        <li>
+                            <a
+                                href="https://github.com/amitastreait/lwc-opensource"
+                                target="_blank"
+                            >
+                                Github Repo Link
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -74,6 +82,12 @@
                 >
                 <a
                     href="JavaScript:void(0);"
+                    data-item="isForm"
+                    onclick={navItemsSelected}
+                    >Forms</a
+                >
+                <a
+                    href="JavaScript:void(0);"
                     data-item="isMisc"
                     onclick={navItemsSelected}
                     >Misc</a
@@ -100,6 +114,9 @@
             </template>
             <template if:true={navMenu.isMisc}>
                 <my-news-api></my-news-api>
+            </template>
+            <template if:true={navMenu.isForm}>
+                <my-form></my-form>
             </template>
         </article>
         <aside class="side"></aside>

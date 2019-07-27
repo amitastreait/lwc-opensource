@@ -11,7 +11,7 @@
 .wrapper > * {
     /*border: 1px solid #f08c00;*/
     /*background-color: #ffec99;*/
-    
+
     border-radius: 5px;
     padding: 10px;
 }
@@ -25,7 +25,6 @@ nav ul {
     grid-area: header;
 }
 .content {
-    
     grid-area: content;
 }
 .main-nav {

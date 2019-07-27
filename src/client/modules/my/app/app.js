@@ -13,7 +13,7 @@ export default class App extends LightningElement {
         isChild: false,
         isMisc: false,
         isShadow: false,
-        isForm : false
+        isForm: false
     };
     renderedCallback() {
         if (this._isRendered) return;

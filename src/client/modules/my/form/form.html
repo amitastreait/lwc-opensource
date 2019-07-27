@@ -48,8 +48,8 @@
         <ui-card title="Employee Info">
             <template for:each={students} for:item="emp">
                 <p key={emp.Id}>
-                    {emp.firstName} &nbsp; {emp.lastName} 
-                    {emp.title} &nbsp; {emp.email}
+                    {emp.firstName} &nbsp; {emp.lastName} {emp.title} &nbsp;
+                    {emp.email}
                 </p>
             </template>
         </ui-card>
